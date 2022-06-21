@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     borderWidth: borderWidth.xsmall,
     borderColor: Colors.Border600,
     borderRadius: 50,
-    marginHorizontal: 5,
+    marginHorizontal: margin.small,
     overflow: "hidden",
   },
   margin: {

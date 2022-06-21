@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import Login from "./components/Login";
 import Title from "./UI/Title";
-import { Colors, fonts } from "./assets/utilities";
+import { Colors, fonts, margin } from "./assets/utilities";
 
 export default function App() {
   return (
@@ -35,7 +35,7 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: margin.xlarge,
     justifyContent: "center",
   },
   text: {

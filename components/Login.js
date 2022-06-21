@@ -2,7 +2,7 @@ import { View, StyleSheet, Text, Dimensions } from "react-native";
 import Buttons from "../UI/Buttons";
 
 import React from "react";
-import { Colors, fonts } from "../assets/utilities";
+import { Colors, fonts, letterSpacing, margin } from "../assets/utilities";
 
 const Login = () => {
   function singInWithEmail() {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
     justifyContent: "center",
-    marginVertical: 20,
+    marginVertical: margin.xlarge,
   },
   buttons: {
     borderRadius: 30,
@@ -61,6 +61,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     textTransform: "capitalize",
     color: Colors.Gray600,
-    letterSpacing: 1,
+    letterSpacing: letterSpacing.medium,
   },
 });
