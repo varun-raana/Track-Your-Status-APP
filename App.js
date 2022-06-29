@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Colors, margin } from "./assets/utilities";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import Home from "./screens/Home";
 import Favourite from "./screens/Favourite";
 import { StatusBar } from "expo-status-bar";
@@ -31,6 +32,7 @@ const TabBarStyles = {
   headerRightContainerStyle: {
     paddingRight: margin.large,
   },
+  tabBarShowLabel: false,
   headerRight: () => {
     return <HeaderAvatar />;
   },
@@ -51,9 +53,35 @@ function HandleScreen() {
         component={Home}
         options={{
           headerTitle: "Home",
+          tabBarIcon: ({ color, size, focused }) => {
+            return (
+              <Ionicons
+                name="home"
+                color={color}
+                size={size}
+                focused={focused}
+              />
+            );
+          },
         }}
       />
-      <Tab.Screen name="Favourites" component={Favourite} />
+      <Tab.Screen
+        name="Favourites"
+        component={Favourite}
+        options={{
+          headerTitle: "Reports",
+          tabBarIcon: ({ color, size, focused }) => {
+            return (
+              <Ionicons
+                name="clipboard-outline"
+                color={color}
+                size={size}
+                focused={focused}
+              />
+            );
+          },
+        }}
+      />
     </Tab.Navigator>
   );
 }

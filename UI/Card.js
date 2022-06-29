@@ -1,16 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { Colors } from "../assets/utilities";
 
-const Card = ({ children }) => {
-  return <View style={styles.card}>{children}</View>;
+const Card = ({ children, style }) => {
+  return <View style={[styles.card, style]}>{children}</View>;
 };
 
 export default Card;
 
 const styles = StyleSheet.create({
   card: {
-    padding: 7,
-    backgroundColor: Colors.Gray600,
+    flex: 1,
+    padding: 24,
+    backgroundColor: "#222",
+    elevation: 5,
+    shadowColor: "darkgray",
+    shadowRadius: 8,
+    borderRadius: 8,
   },
 });

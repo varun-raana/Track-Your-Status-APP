@@ -1,13 +1,6 @@
 import { StyleSheet, Text, Dimensions, View } from "react-native";
-import {
-  Colors,
-  deviceWidth,
-  fonts,
-  letterSpacing,
-  margin,
-} from "../assets/utilities";
+import { Colors, fonts, letterSpacing, margin } from "../assets/utilities";
 import Buttons from "../UI/Buttons";
-import React from "react";
 
 const LoginContainer = ({ onPress }) => {
   return (

@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   text: {
-    fontSize: deviceWidth <= maxWidth ? fonts.mini : fonts.medium,
+    fontSize: deviceWidth <= maxWidth ? fonts.mini : fonts.small,
     textAlign: "center",
     textTransform: "capitalize",
     letterSpacing: letterSpacing.small,
