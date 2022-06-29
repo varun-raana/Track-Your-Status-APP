@@ -1,8 +1,7 @@
-import { View, Text, Pressable, StyleSheet, Dimensions } from "react-native";
-import React from "react";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 import {
-  borderWidth,
   Colors,
+  deviceWidth,
   fonts,
   fontWeights,
   letterSpacing,
@@ -11,37 +10,39 @@ import {
 
 const Buttons = ({ children, style, onPress }) => {
   return (
-    <View style={[styles.button, style]}>
-      <Pressable
-        android_disableSound={false}
-        android_ripple={{ color: Colors.Ripple800 }}
-        style={[styles.margin, style]}
-        onPress={onPress}>
-        <Text style={[styles.text, style]}>{children}</Text>
-      </Pressable>
+    <View style={styles.button}>
+      <View
+        style={{
+          overflow: "hidden",
+          borderRadius: 30,
+        }}>
+        <Pressable
+          style={[styles.innerButtonContainer, style]}
+          android_ripple={{ color: Colors.Background }}
+          onPress={onPress}>
+          <Text style={[styles.text]}>{children}</Text>
+        </Pressable>
+      </View>
     </View>
   );
 };
 
-const { width } = Dimensions.get("window");
+const maxWidth = 380;
 
 export default Buttons;
 
 const styles = StyleSheet.create({
-  button: {
-    borderWidth: borderWidth.xsmall,
-    borderColor: Colors.Border600,
-    borderRadius: 50,
+  outerButtonContainer: {
     marginHorizontal: margin.small,
+    borderRadius: 30,
     overflow: "hidden",
   },
-  margin: {
-    paddingVertical: width <= 360 ? margin.large : margin.xxlarge,
-    paddingHorizontal: width <= 360 ? margin.xlarge : margin.xxxlarge,
+  innerButtonContainer: {
     backgroundColor: Colors.Primary600,
+    overflow: "hidden",
   },
   text: {
-    fontSize: width <= 360 ? fonts.mini : fonts.medium,
+    fontSize: deviceWidth <= maxWidth ? fonts.mini : fonts.medium,
     textAlign: "center",
     textTransform: "capitalize",
     letterSpacing: letterSpacing.small,

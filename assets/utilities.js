@@ -1,3 +1,6 @@
+const { Dimensions } = require("react-native");
+const deviceWidth = Dimensions.get("window").width;
+
 const Colors = {
   Main: "#fff",
   Gray600: "#868e96",
@@ -50,6 +53,7 @@ const letterSpacing = {
 };
 
 module.exports = {
+  deviceWidth,
   Colors,
   fonts,
   fontWeights,
