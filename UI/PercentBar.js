@@ -1,10 +1,9 @@
 import { StyleSheet, View } from "react-native";
-import React from "react";
 
-const PercentBar = () => {
+const PercentBar = ({ style }) => {
   return (
     <View style={styles.outerContainer}>
-      <View style={styles.innerContainer}></View>
+      <View style={[styles.innerContainer, style]}></View>
     </View>
   );
 };
@@ -15,13 +14,12 @@ const styles = StyleSheet.create({
   outerContainer: {
     marginTop: 4,
     height: 4,
-    backgroundColor: "gray",
+    backgroundColor: "#222",
     position: "relative",
     width: "100%",
     borderRadius: 50,
   },
   innerContainer: {
-    width: "76%",
     borderRadius: 50,
     height: 4,
     backgroundColor: "green",

@@ -1,7 +1,8 @@
 import { SafeAreaView, StyleSheet } from "react-native";
 import { deviceWidth, fonts } from "../assets/utilities";
+
 import Title from "../UI/Title";
-import HomePageContent from "../components/HomePageContent";
+import HomePageContent from "../components/homePage/HomePageContent";
 
 const Home = () => {
   return (
@@ -21,8 +22,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: deviceWidth <= 380 ? fonts.medium : fonts.smallScreen,
-    fontWeight: "bold",
-    marginLeft: 10,
+    fontWeight: "800",
     letterSpacing: 3,
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
   },
 });

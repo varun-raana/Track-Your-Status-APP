@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
-import { Colors, fontWeights } from "../assets/utilities";
+import { StyleSheet, Text, View, Pressable, Dimensions } from "react-native";
+import { Colors, fontWeights } from "../../assets/utilities";
 
 const HomePageButtons = ({ listTab, status, setStatusFilter }) => {
   return (
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   listTabs: {
     marginHorizontal: 50,
     flexDirection: "row",
-    borderWidth: 1,
+    borderWidth: 0.2,
     borderColor: "gray",
     borderRadius: 30,
     overflow: "hidden",
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "gray",
-    fontSize: 12,
+    fontSize: Dimensions.get("window").width <= 380 ? 12 : 14,
     fontWeight: fontWeights.bold,
     textTransform: "capitalize",
     letterSpacing: 0.9,

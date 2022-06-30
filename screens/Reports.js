@@ -1,12 +1,11 @@
 import { SafeAreaView, Text } from "react-native";
-import React from "react";
 
-const Favourite = () => {
+const Reports = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Text>Favourite</Text>
+      <Text>Reports</Text>
     </SafeAreaView>
   );
 };
 
-export default Favourite;
+export default Reports;

@@ -29,12 +29,12 @@ export default ImageList;
 
 const styles = StyleSheet.create({
   image: {
-    height: 35,
-    width: 35,
+    height: 30,
+    width: 30,
     resizeMode: "cover",
     borderRadius: 50,
     marginLeft: -15,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "white",
     overflow: "hidden",
   },

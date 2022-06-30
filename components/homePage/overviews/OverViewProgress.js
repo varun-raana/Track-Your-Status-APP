@@ -1,34 +1,34 @@
 import { Dimensions, StyleSheet, Text, View } from "react-native";
-import Card from "../UI/Card";
-import { fontWeights, letterSpacing } from "../assets/utilities";
-import ImageList from "./ImageList";
-import PercentBar from "./PercentBar";
-import Reports from "./Reports";
-import ActionPendingContainer from "./ActionPendingContainer";
+import { fontWeights, letterSpacing } from "../../../assets/utilities";
 
-const Progress = () => {
+import Card from "../../../UI/Card";
+import ImageList from "../../ImageList";
+import PercentBar from "../../../UI/PercentBar";
+import Reports from "./Reports";
+import Title from "../../../UI/Title";
+
+const OverViewProgress = () => {
   return (
     <>
       <Card style={styles.newCard}>
         <View style={styles.container}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.text}>file progress</Text>
+            <Title style={styles.text}>file progress</Title>
           </View>
           <ImageList />
         </View>
         <Text style={styles.descText}>here you can see your progress</Text>
         <View style={styles.percentContainer}>
           <Text style={styles.text}>76%</Text>
-          <PercentBar />
+          <PercentBar style={{ width: "76%" }} />
         </View>
       </Card>
       <Reports />
-      <ActionPendingContainer />
     </>
   );
 };
 
-export default Progress;
+export default OverViewProgress;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,42 +1,20 @@
-import Login from "./screens/Login";
+import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Colors, margin } from "./assets/utilities";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import Home from "./screens/Home";
-import Favourite from "./screens/Favourite";
-import { StatusBar } from "expo-status-bar";
-import HeaderAvatar from "./components/HeaderAvatar";
+import { Colors } from "./assets/utilities";
+import {
+  StackNavigationScreenOptions,
+  TabBarStyles,
+  HomeScreenOptions,
+  AddTaskScreenOptions,
+  FavouriteScreenOptions,
+} from "./ScreensNavigationStyles";
 
-const TabBarStyles = {
-  tabBarLabelPosition: "beside-icon",
-  tabBarActiveTintColor: Colors.Primary600,
-  headerShadowVisible: false,
-  headerTintColor: "white",
-  tabBarLabelStyle: {
-    fontSize: 14,
-    fontWeight: "bold",
-    letterSpacing: 1,
-  },
-  tabBarStyle: {
-    height: 60,
-    backgroundColor: Colors.Ripple800,
-    shadowColor: "#fff",
-    borderTopWidth: 0,
-    elevation: 4,
-  },
-  headerStyle: {
-    backgroundColor: Colors.Ripple800,
-  },
-  headerRightContainerStyle: {
-    paddingRight: margin.large,
-  },
-  tabBarShowLabel: false,
-  headerRight: () => {
-    return <HeaderAvatar />;
-  },
-};
+import Login from "./screens/Login";
+import Home from "./screens/Home";
+import AddTask from "./screens/AddTask";
+import Reports from "./screens/Reports";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -51,36 +29,17 @@ function HandleScreen() {
       <Tab.Screen
         name="Homes"
         component={Home}
-        options={{
-          headerTitle: "Home",
-          tabBarIcon: ({ color, size, focused }) => {
-            return (
-              <Ionicons
-                name="home"
-                color={color}
-                size={size}
-                focused={focused}
-              />
-            );
-          },
-        }}
+        options={{ ...HomeScreenOptions }}
       />
       <Tab.Screen
-        name="Favourites"
-        component={Favourite}
-        options={{
-          headerTitle: "Reports",
-          tabBarIcon: ({ color, size, focused }) => {
-            return (
-              <Ionicons
-                name="clipboard-outline"
-                color={color}
-                size={size}
-                focused={focused}
-              />
-            );
-          },
-        }}
+        name="Add Task"
+        component={AddTask}
+        options={{ ...AddTaskScreenOptions }}
+      />
+      <Tab.Screen
+        name="Reports"
+        component={Reports}
+        options={{ ...FavouriteScreenOptions }}
       />
     </Tab.Navigator>
   );
@@ -91,13 +50,7 @@ export default function App() {
     <>
       <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-            contentStyle: {
-              backgroundColor: Colors.Ripple800,
-            },
-          }}>
+        <Stack.Navigator screenOptions={{ ...StackNavigationScreenOptions }}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Home" component={HandleScreen} />
         </Stack.Navigator>

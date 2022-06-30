@@ -1,6 +1,7 @@
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { useState } from "react";
-import Progress from "./Progress";
+
+import OverViewProgress from "../homePage/overviews/OverViewProgress";
 import HomePageButtons from "./HomePageButtons";
 
 const listTab = [
@@ -11,11 +12,10 @@ const listTab = [
     status: "productivity",
   },
 ];
+const overViewData = <OverViewProgress />;
 
 const HomePageContent = () => {
   const [status, setStatus] = useState("overview");
-  const overViewData = <Progress />;
-
   const [listData, setListData] = useState(overViewData);
 
   const setStatusFilter = (status) => {
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     marginTop: 50,
   },
   innerContainer: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 14,
     paddingVertical: 20,
   },
 });
