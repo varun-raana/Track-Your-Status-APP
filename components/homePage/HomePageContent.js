@@ -36,7 +36,7 @@ const HomePageContent = () => {
         listTab={listTab}
         setStatusFilter={setStatusFilter}
       />
-      <ScrollView style={styles.innerContainer}>
+      <ScrollView contentContainerStyle={styles.innerContainer}>
         <View style={{ flex: 1 }}>{listData}</View>
       </ScrollView>
     </View>

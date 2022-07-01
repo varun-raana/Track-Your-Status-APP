@@ -1,4 +1,5 @@
 import { StyleSheet, View, Dimensions } from "react-native";
+
 import ActionPendingStat from "../../../UI/ActionPendingStat";
 import Title from "../../../UI/Title";
 import ActionPendingContainer from "./ActionPendingContainer";
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: Dimensions.get("window").width < 380 ? 14 : 23,
+    paddingLeft: 10,
   },
   actionPendingReportButton: {
     backgroundColor: "#d9480f",

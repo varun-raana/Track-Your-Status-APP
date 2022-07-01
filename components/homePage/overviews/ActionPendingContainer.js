@@ -36,6 +36,8 @@ const ActionPendingContainer = () => {
             </View>
             <ImageList />
           </View>
+          <Text style={styles.descText}>2 new</Text>
+          <Text style={styles.infoText}>from lawyer</Text>
           <View style={styles.percentContainer}>
             <View style={styles.percentageMargin}>
               <PercentBar
@@ -43,7 +45,7 @@ const ActionPendingContainer = () => {
               />
             </View>
             <ActionPendingStat style={{ backgroundColor: "darkorange" }}>
-              14/17
+              14/24
             </ActionPendingStat>
           </View>
         </Card>
@@ -56,30 +58,36 @@ const ActionPendingContainer = () => {
             </View>
             <ImageList />
           </View>
-          <Text style={styles.descText}>5 new</Text>
-          <Text style={styles.infoText}>from you</Text>
+          <Text style={styles.descText}>9 new</Text>
+          <Text style={styles.infoText}>harvy team</Text>
           <View style={styles.percentContainer}>
             <View style={styles.percentageMargin}>
-              <PercentBar style={{ backgroundColor: "green", width: "60%" }} />
+              <PercentBar style={{ backgroundColor: "green", width: "6%" }} />
             </View>
             <ActionPendingStat style={{ backgroundColor: "green" }}>
-              6/10
+              6/24
             </ActionPendingStat>
           </View>
         </Card>
         <Card style={styles.newCard}>
           <View style={styles.container}>
             <View style={[styles.iconsBox, { backgroundColor: "brown" }]}>
-              <Ionicons name="albums" color={"white"} size={24} />
+              <Ionicons
+                name="notifications-outline"
+                color={"white"}
+                size={24}
+              />
             </View>
             <ImageList />
           </View>
+          <Text style={styles.descText}>5 new</Text>
+          <Text style={styles.infoText}>company</Text>
           <View style={styles.percentContainer}>
             <View style={styles.percentageMargin}>
               <PercentBar style={{ backgroundColor: "brown", width: "4%" }} />
             </View>
             <ActionPendingStat style={{ backgroundColor: "brown" }}>
-              4/14
+              4/24
             </ActionPendingStat>
           </View>
         </Card>
