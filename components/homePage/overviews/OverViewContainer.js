@@ -1,6 +1,5 @@
 import { Dimensions, Pressable, StyleSheet, Text, View } from "react-native";
 import { fontWeights, letterSpacing } from "../../../assets/utilities";
-import { useNavigation } from "@react-navigation/native";
 
 import Card from "../../../UI/Card";
 import ImageList from "../../ImageList";
@@ -8,7 +7,7 @@ import PercentBar from "../../../UI/PercentBar";
 import Reports from "./Reports";
 import Title from "../../../UI/Title";
 
-const OverViewProgress = () => {
+const OverViewContainer = () => {
   // const navigation = useNavigation();
   return (
     <>
@@ -32,7 +31,7 @@ const OverViewProgress = () => {
   );
 };
 
-export default OverViewProgress;
+export default OverViewContainer;
 
 const styles = StyleSheet.create({
   container: {
