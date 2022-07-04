@@ -1,14 +1,20 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import FileProgress from "../components/fileProgressPage/FileProgress";
 
-const FileProgressPage = () => {
+const FileProgressPage = ({ navigation }) => {
   return (
-    <View>
-      <Text>FileProgressPage</Text>
+    <View style={styles.screen}>
+      <FileProgress />
     </View>
   );
 };
 
 export default FileProgressPage;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+});

@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
   actionPendingReportButton: {
     marginLeft: 10,
     color: "white",
-    borderRadius: 50,
+    borderRadius: 20,
     paddingHorizontal: 10,
     textAlign: "center",
-    paddingVertical: 2,
+    padding: 4,
+    textAlign: "center",
     fontWeight: "bold",
   },
 });

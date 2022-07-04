@@ -8,6 +8,9 @@ const Colors = {
   Background: "#212529",
   Primary600: "#339af0",
   Ripple800: "#020a11",
+  Purple: "#9c36b5",
+  Green: "#2f9e44",
+  Orange: "#e8590c",
 };
 
 const fonts = {

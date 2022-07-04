@@ -54,7 +54,11 @@ const ActionPendingContainer = () => {
         <Card style={[styles.newCard, { marginRight: 20 }]}>
           <View style={styles.container}>
             <View style={[styles.iconsBox, { backgroundColor: "green" }]}>
-              <Ionicons name="book" color={"white"} size={24} />
+              <Ionicons
+                name="checkmark-done-outline"
+                color={"white"}
+                size={24}
+              />
             </View>
             <ImageList />
           </View>

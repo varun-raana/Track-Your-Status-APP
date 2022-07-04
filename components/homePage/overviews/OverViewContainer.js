@@ -6,12 +6,13 @@ import ImageList from "../../ImageList";
 import PercentBar from "../../../UI/PercentBar";
 import Reports from "./Reports";
 import Title from "../../../UI/Title";
+import { useNavigation } from "@react-navigation/native";
 
 const OverViewContainer = () => {
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <>
-      <Pressable>
+      <Pressable onPress={() => navigation.navigate("File Progress")}>
         <Card style={styles.newCard}>
           <View style={styles.container}>
             <View style={{ flex: 1 }}>

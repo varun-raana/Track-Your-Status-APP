@@ -42,7 +42,12 @@ export const AddTaskScreenOptions = {
   headerTitle: "Add Tasks",
   tabBarIcon: ({ color, size, focused }) => {
     return (
-      <Ionicons name="add-circle" color={color} size={size} focused={focused} />
+      <Ionicons
+        name="add-circle-outline"
+        color={color}
+        size={size}
+        focused={focused}
+      />
     );
   },
 };
@@ -66,4 +71,17 @@ export const StackNavigationScreenOptions = {
   contentStyle: {
     backgroundColor: Colors.Ripple800,
   },
+};
+
+export const FileProgressTabHandlerScreenOptions = {
+  animation: "slide_from_bottom",
+  presentation: "modal",
+  headerShown: true,
+  headerStyle: {
+    backgroundColor: Colors.Ripple800,
+  },
+  sceneContainerStyles: { backgroundColor: "red" },
+  headerTitleAlign: "center",
+  headerTintColor: "white",
+  headerRight: () => <HeaderAvatar />,
 };
