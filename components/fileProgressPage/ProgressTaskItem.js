@@ -3,11 +3,19 @@ import React from "react";
 import PressableButton from "../PressableButton";
 import IconButton from "../IconButton";
 import Title from "../../UI/Title";
+import { useNavigation } from "@react-navigation/native";
 import { Colors, fontWeights } from "../../assets/utilities";
 
 const ProgressTaskItem = ({ iconName, titleName, background }) => {
+  const navigation = useNavigation();
+
+  function navigateDetails() {
+    navigation.navigate("Reports", {
+      title: titleName,
+    });
+  }
   return (
-    <PressableButton>
+    <PressableButton onPress={navigateDetails}>
       <View style={styles.cards}>
         <IconButton
           style={[styles.icons, { backgroundColor: background }]}

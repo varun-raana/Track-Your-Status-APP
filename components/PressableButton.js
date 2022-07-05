@@ -24,8 +24,4 @@ const styles = StyleSheet.create({
     borderColor: Colors.Background,
     overflow: "hidden",
   },
-
-  pressed: {
-    borderColor: "green",
-  },
 });

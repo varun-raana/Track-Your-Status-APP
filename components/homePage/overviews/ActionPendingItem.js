@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import Card from "../../../UI/Card";
+import Title from "../../../UI/Title";
 import ImageList from "../../ImageList";
 import IconButton from "../../IconButton";
 import PercentBar from "../../../UI/PercentBar";
 import ActionPendingStat from "../../../UI/ActionPendingStat";
-import Title from "../../../UI/Title";
 import { fontWeights, letterSpacing } from "../../../assets/utilities";
 
 const ActionPendingItem = ({

@@ -35,7 +35,10 @@ export default function App() {
           <Stack.Screen
             name="File Progress"
             component={FileProgressPageHandler}
-            options={{ ...FileProgressTabHandlerScreenOptions }}
+            options={{
+              ...FileProgressTabHandlerScreenOptions,
+              title: "Weekly Progress",
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { View } from "react-native";
+import React, { useLayoutEffect } from "react";
 import ProgressTaskItem from "./ProgressTaskItem";
 import { Colors } from "../../assets/utilities";
 

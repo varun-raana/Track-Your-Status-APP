@@ -1,9 +1,8 @@
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { useState } from "react";
+import { ScrollView, StyleSheet, View } from "react-native";
 
-import { Colors, fontWeights } from "../../../assets/utilities";
-import OverViewContainer from "./OverViewContainer";
 import Buttons from "./Buttons";
+import OverViewContainer from "./OverViewContainer";
 
 const OverView = () => {
   const [status, setStatus] = useState(1);
