@@ -29,7 +29,7 @@ const ProgressTaskList = () => {
       <ProgressTaskItem
         iconName="trash"
         background={Colors.Orange}
-        titleName="harvy team 2 task"
+        titleName="law firm task"
       />
     </View>
   );

@@ -80,7 +80,6 @@ export const FileProgressTabHandlerScreenOptions = {
   headerStyle: {
     backgroundColor: Colors.Ripple800,
   },
-  sceneContainerStyles: { backgroundColor: "red" },
   headerTitleAlign: "center",
   headerTintColor: "white",
   headerRight: () => <HeaderAvatar />,

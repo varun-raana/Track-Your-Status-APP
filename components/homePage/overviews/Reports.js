@@ -2,7 +2,7 @@ import { StyleSheet, View, Dimensions } from "react-native";
 
 import ActionPendingStat from "../../../UI/ActionPendingStat";
 import Title from "../../../UI/Title";
-import ActionPendingContainer from "./ActionPendingContainer";
+import ActionPendingList from "./ActionPendingList";
 
 const Reports = () => {
   return (
@@ -13,7 +13,7 @@ const Reports = () => {
           24%
         </ActionPendingStat>
       </View>
-      <ActionPendingContainer />
+      <ActionPendingList />
     </>
   );
 };

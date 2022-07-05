@@ -15,9 +15,7 @@ const OverViewContainer = () => {
       <Pressable onPress={() => navigation.navigate("File Progress")}>
         <Card style={styles.newCard}>
           <View style={styles.container}>
-            <View style={{ flex: 1 }}>
-              <Title style={styles.text}>file progress</Title>
-            </View>
+            <Title style={styles.text}>file progress</Title>
             <ImageList />
           </View>
           <Text style={styles.descText}>here you can see your progress</Text>
@@ -37,6 +35,7 @@ export default OverViewContainer;
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   text: {
