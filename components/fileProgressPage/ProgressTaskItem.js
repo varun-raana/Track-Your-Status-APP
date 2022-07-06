@@ -10,10 +10,11 @@ const ProgressTaskItem = ({ iconName, titleName, background }) => {
   const navigation = useNavigation();
 
   function navigateDetails() {
-    navigation.navigate("Reports", {
+    navigation.navigate("ProgressReports", {
       title: titleName,
     });
   }
+
   return (
     <PressableButton onPress={navigateDetails}>
       <View style={styles.cards}>

@@ -14,9 +14,9 @@ export const yourTasks = [
 export const companyTasks = ["Email ", "DMAT ", "Confirmation "];
 
 export const harvyOpsTeamTasks = [
-  "physical document not sent",
+  "Physical document not sent",
   "ISR form not filled up",
-  "notary coordination pending",
+  "Notary coordination pending",
 ];
 
 export const titleNames = [

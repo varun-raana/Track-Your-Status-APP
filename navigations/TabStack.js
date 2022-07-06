@@ -11,6 +11,7 @@ import {
 } from "../ScreensNavigationStyles";
 import { Colors } from "../assets/utilities";
 import FileProgressPage from "../screens/FileProgressPage";
+import ProgressReports from "../screens/ProgressReports";
 
 const Tab = createBottomTabNavigator();
 
@@ -53,8 +54,8 @@ export const FileProgressTabStackHandler = () => {
         options={{ ...HomeScreenOptions }}
       />
       <Tab.Screen
-        name="Reports"
-        component={Reports}
+        name="ProgressReports"
+        component={ProgressReports}
         options={{ ...FavouriteScreenOptions }}
       />
     </Tab.Navigator>

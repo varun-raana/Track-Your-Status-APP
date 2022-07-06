@@ -1,7 +1,7 @@
 import { View } from "react-native";
-import React, { useLayoutEffect } from "react";
-import ProgressTaskItem from "./ProgressTaskItem";
+
 import { Colors } from "../../assets/utilities";
+import ProgressTaskItem from "./ProgressTaskItem";
 
 const ProgressTaskList = () => {
   return (

@@ -1,36 +1,10 @@
-import { View } from "react-native";
 import { StyleSheet, SafeAreaView, Text } from "react-native";
 import { Colors, fontWeights } from "../assets/utilities";
-import TaskItem from "../components/TaskItem";
-import {
-  yourTasks,
-  companyTasks,
-  harvyOpsTeamTasks,
-  titleNames,
-} from "../TaskNames";
 
-const Reports = ({ route }) => {
-  const { title } = route.params;
-
-  let data =
-    title === titleNames[0]
-      ? yourTasks
-      : title === titleNames[1]
-      ? companyTasks
-      : harvyOpsTeamTasks;
-
+const Reports = () => {
   return (
     <SafeAreaView style={styles.screen}>
-      <View>
-        <Text style={styles.text}>{title}</Text>
-      </View>
-      <View style={styles.taskContainer}>
-        {data.map((name, index) => {
-          return (
-            <TaskItem key={index} taskNumber={index + 1} taskName={name} />
-          );
-        })}
-      </View>
+      <Text style={styles.text}>reports</Text>
     </SafeAreaView>
   );
 };
@@ -53,8 +27,5 @@ const styles = StyleSheet.create({
     textTransform: "capitalize",
     color: "white",
     backgroundColor: Colors.Primary600,
-  },
-  taskContainer: {
-    paddingTop: 20,
   },
 });

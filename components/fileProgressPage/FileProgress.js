@@ -1,8 +1,8 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
+import Buttons from "../../UI/Buttons";
 import SearchInput from "../SearchInput";
 import ProgressTaskList from "./ProgressTaskList";
-import Buttons from "../../UI/Buttons";
 
 const FileProgress = () => {
   return (
@@ -11,7 +11,7 @@ const FileProgress = () => {
       showsVerticalScrollIndicator={false}
       style={styles.container}>
       <View style={{ marginTop: 20 }}>
-        <SearchInput />
+        <SearchInput placeholder={"What are you looking for ?"} />
       </View>
       <View style={styles.buttonBox}>
         <Buttons style={styles.button}>all</Buttons>

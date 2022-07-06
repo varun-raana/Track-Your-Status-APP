@@ -2,11 +2,11 @@ import { StyleSheet, Text, View, TextInput } from "react-native";
 import React from "react";
 import { Colors } from "../assets/utilities";
 
-const SearchInput = () => {
+const SearchInput = ({ placeholder }) => {
   return (
     <View>
       <TextInput
-        placeholder="What are you looking for ?"
+        placeholder={placeholder}
         placeholderTextColor={Colors.Border600}
         style={[styles.searchInput]}
         autoCapitalize="sentences"
